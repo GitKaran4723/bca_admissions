@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Application Submitted</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-green-50 text-gray-800 min-h-screen flex flex-col items-center justify-center px-4">
+  <div class="bg-white shadow-md rounded-lg p-6 max-w-xl text-center">
+    <h1 class="text-2xl font-bold text-green-700 mb-4 uppercase">Your Application is Submitted!</h1>
+    <p class="text-lg mb-2">Your Application Number is:</p>
+    <div class="text-2xl font-mono font-semibold text-indigo-700 border px-4 py-2 rounded inline-block mb-4" id="appNo"><%= data.applicationNumber %></div>
+
+    <button onclick="copyAppNumber()" class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700 text-sm mb-4">
+      📋 Copy Application Number
+    </button>
+
+    <div>
+      <a href="/verify" class="inline-block mt-4 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded">🖨️ Print Application</a>
+    </div>
+  </div>
+
+  <script>
+    function copyAppNumber() {
+      const text = document.getElementById('appNo').innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert('Application number copied!');
+      });
+    }
+  </script>
+</body>
+</html>
