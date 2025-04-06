@@ -1,0 +1,170 @@
+<!-- views/print.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCA Application Print Format</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 1cm;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            background: white;
+            color: black;
+            margin: 0;
+            padding: 0;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+            border: 1px solid #000;
+            margin: auto;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .logo {
+            position: absolute;
+            top: 15mm;
+            left: 20mm;
+            width: 70px;
+        }
+
+        .photo-box {
+            position: absolute;
+            top: 45mm;
+            right: 20mm;
+            width: 120px;
+            height: 140px;
+            border: 1px solid #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 10px;
+            text-align: center;
+        }
+
+        .application-no {
+            position: absolute;
+            top: 40mm;
+            right: 20mm;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .header,
+        .sub-header {
+            text-align: center;
+        }
+
+        .info-table {
+            width: 100%;
+            font-size: 13px;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .info-table td {
+            padding: 6px 10px;
+            vertical-align: top;
+        }
+
+        .info-table td span {
+            display: inline-block;
+            min-width: 150px;
+            border-bottom: 1px dotted #000;
+        }
+
+        .declaration {
+            font-size: 12px;
+            margin-top: 20px;
+        }
+
+        .signature-section {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            margin-top: 30px;
+        }
+
+        .no-print {
+            display: none;
+        }
+
+        @media screen {
+            .no-print {
+                display: block;
+                text-align: center;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="page">
+    <img src="/images/bu_logo.png" class="logo" alt="BU Logo">
+    <div class="application-no">Application No: <%= data.id %></div>
+    <div class="photo-box">Student Passport<br>Size photo</div>
+
+    <div class="header">
+        <h2 style="margin-bottom: 0">BANGALORE UNIVERSITY</h2>
+        <h3 style="margin: 2px 0; font-weight: normal;">ಬೆಂಗಳೂರು ವಿಶ್ವವಿದ್ಯಾಲಯ</h3>
+        <p style="margin: 2px 0">Jnanabharathi, Bengaluru, Karnataka – 560 056</p>
+    </div>
+
+    <div class="sub-header" style="margin-top: 10px; font-weight: bold;">
+        Application Form for BCA - Data Science / Artificial Intelligence and Machine Learning / Full Stack Development
+    </div>
+
+    <table class="info-table">
+        <tr><td>1. Name of the Candidate:</td><td><span><%= data.name %></span></td></tr>
+        <tr><td style="padding-left: 20px">(In Block Letters)</td></tr>
+        <tr><td>2. Mother’s Name:</td><td><span><%= data.motherName %></span></td></tr>
+        <tr><td>3. Father’s Name:</td><td><span><%= data.fatherName %></span></td></tr>
+        <tr><td>4. Date of Birth:</td><td><span><%= data.dob %></span></td></tr>
+        <tr><td>5. Gender:</td><td><span><%= data.gender %></span></td></tr>
+        <tr><td>6. Mobile Number:</td><td><span><%= data.mobile %></span></td></tr>
+        <tr><td>7. Email Id:</td><td><span><%= data.email %></span></td></tr>
+        <tr><td>8. Address:</td><td><span><%= data.address %></span></td></tr>
+        <tr><td>9. Nationality:</td><td><span><%= data.nationality %></span></td></tr>
+        <tr><td>10. Religion:</td><td><span><%= data.religion %></span></td></tr>
+        <tr><td>11. Category (SC / ST / Cat–1, 2A, 2B, 3A, 3B):</td><td><span><%= data.category %></span></td></tr>
+        <tr><td>12. Caste Certificate No.:</td><td><span><%= data.casteCertNo %></span></td></tr>
+        <tr><td>13. Parent’s Annual Income:</td><td><span><%= data.annualIncome %></span></td></tr>
+        <tr><td>14. Income Certificate No.:</td><td><span><%= data.incomeCertNo %></span></td></tr>
+        <tr><td>15. 10<sup>th</sup> Standard Board:</td><td><span><%= data.tenthBoard %></span></td></tr>
+        <tr><td>16. 10<sup>th</sup> Standard Percentage:</td><td><span><%= data.tenthPercent %></span></td></tr>
+        <tr><td>17. 12<sup>th</sup> Standard Board:</td><td><span><%= data.twelfthBoard %></span></td></tr>
+        <tr><td>18. 12<sup>th</sup> Standard Combination:</td><td><span><%= data.twelfthCombo %></span></td></tr>
+        <tr><td>19. 12<sup>th</sup> Standard Max. Marks:</td><td><span><%= data.twelfthMaxMarks %></span></td></tr>
+        <tr><td>20. Marks Scored:</td><td><span><%= data.twelfthMarksScored %></span></td></tr>
+        <tr><td>21. 12<sup>th</sup> Standard Percentage:</td><td><span><%= data.twelfthPercent %></span></td></tr>
+    </table>
+
+    <div class="declaration">
+        <p>The above information is completely true to the best of my knowledge, belief and nothing has been concealed. If found, the application/admission is liable to be cancelled at any level.</p>
+        <div class="signature-section">
+            <p>Date : ________________</p>
+            <p>Place : ________________</p>
+        </div>
+    </div>
+
+    <div class="signature-section">
+        <p>Signature of the Parent</p>
+        <p>Signature of the Candidate</p>
+    </div>
+
+    <div class="no-print">
+        <button onclick="window.print()">🖨️ Print This Form</button>
+    </div>
+</div>
+</body>
+</html>
