@@ -4,7 +4,13 @@ const db = require('../database/db');
 const axios = require('axios');
 
 router.get('/', (req, res) => {
-  res.render('home');
+  const lang = req.query.lang || 'kn';
+  res.render('home', { lang });
+});
+
+router.get('/notification', (req, res) => {
+  const lang = req.query.lang || 'kn'; // default Kannada
+  res.render('notification', { lang });
 });
 
 router.get('/apply', (req, res) => {

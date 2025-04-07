@@ -2,22 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Verify Application</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="flex items-center justify-center min-h-screen bg-gray-100">
-  <div class="bg-white p-6 shadow-lg rounded-lg w-full max-w-md">
-    <h2 class="text-xl font-bold mb-4 text-center text-indigo-700">Print Application</h2>
-    <form action="/verify" method="POST" class="space-y-4">
+<body class="flex items-center justify-center min-h-screen bg-gray-100 px-4">
+  <div class="bg-white p-6 sm:p-8 shadow-lg rounded-xl w-full max-w-md">
+    <h2 class="text-2xl sm:text-3xl font-bold mb-6 text-center text-indigo-700">Print Application</h2>
+    
+    <form action="/verify" method="POST" class="space-y-5">
+      <!-- Application Number -->
       <div>
-        <label for="applicationNumber" class="block font-medium">Application Number</label>
-        <input type="text" name="applicationNumber" id="applicationNumber" required class="w-full border p-2 rounded">
+        <label for="applicationNumber" class="block text-sm font-medium text-gray-700 mb-1">Application Number</label>
+        <input 
+          type="text" 
+          name="applicationNumber" 
+          id="applicationNumber" 
+          required 
+          class="w-full border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        >
       </div>
+
+      <!-- Date of Birth -->
       <div>
-        <label for="dob" class="block font-medium">Date of Birth (YYYY-MM-DD)</label>
-        <input type="date" name="dob" id="dob" required class="w-full border p-2 rounded">
+        <label for="dob" class="block text-sm font-medium text-gray-700 mb-1">Date of Birth</label>
+        <input 
+          type="date" 
+          name="dob" 
+          id="dob" 
+          required 
+          class="w-full border border-gray-300 p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        >
       </div>
-      <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-2 rounded">Verify & Show Application</button>
+
+      <!-- Submit Button -->
+      <button 
+        type="submit" 
+        class="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-2 rounded-md text-lg font-semibold transition"
+      >
+        Verify & Show Application
+      </button>
     </form>
   </div>
 </body>
