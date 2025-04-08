@@ -1,6 +1,5 @@
-<% let isKannada = (lang === 'kn'); %>
 <!DOCTYPE html>
-<html lang="<%= isKannada ? 'kn' : 'en' %>">
+<html lang="<% let isKannada = (lang === 'kn'); %>">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,6 +36,37 @@
       </p>
     </section>
 
+    <!-- Programme & Eligibility Table -->
+    <section class="bg-white rounded-2xl shadow-lg p-6 mb-8 overflow-x-auto">
+      <h2 class="text-lg font-semibold text-blue-700 mb-4">
+        📝 <%= isKannada ? 'ಪ್ರೋಗ್ರಾಂ ಮತ್ತು ಅರ್ಹತೆ' : 'Programme Name and Eligibility' %>
+      </h2>
+      <table class="w-full border border-gray-300 text-sm">
+        <thead class="bg-gray-200">
+          <tr>
+            <th class="border px-3 py-2">#</th>
+            <th class="border px-3 py-2"><%= isKannada ? 'ಪ್ರೋಗ್ರಾಂ ಹೆಸರು' : 'Programme Name' %></th>
+            <th class="border px-3 py-2"><%= isKannada ? 'ಅರ್ಹತಾ ಮಾನದಂಡ' : 'Admission Eligibility Criteria' %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border px-3 py-2">1</td>
+            <td class="border px-3 py-2">
+              <%= isKannada
+                ? 'ಬಿ.ಸಿ.ಎ ಪದವೀ ಪೂರ್ವ ಕಾರ್ಯಕ್ರಮ - ಮೆಷಿನ್ ಲರ್ನಿಂಗ್, ಡೇಟಾ ಸೈನ್ಸ್ ಮತ್ತು ಫುಲ್ ಸ್ಟ್ಯಾಕ್ ಡೆವಲಪ್‌ಮೆಂಟ್' 
+                : 'B.C.A. Undergraduate Programme – Machine Learning, Data Science, and Full Stack Development' %>
+            </td>
+            <td class="border px-3 py-2">
+              <%= isKannada
+                ? 'PUC ಅಥವಾ ಸಮಾನ ಅರ್ಹತೆ ಹೊಂದಿರುವ ವಿದ್ಯಾರ್ಥಿಗಳು, ಕಲೆಯು/ವಿಜ್ಞಾನ/ವಾಣಿಜ್ಯ ವಿಷಯಗಳಲ್ಲಿ ಕನಿಷ್ಠ 50% ಅಂಕಗಳನ್ನು ಹೊಂದಿರಬೇಕು. SC/ST/ಶ್ರೇಣಿ-1 ಅಭ್ಯರ್ಥಿಗಳಿಗೆ 45%.'
+                : 'Candidates who have completed 2 years of PUC or equivalent with Arts/Science/Commerce subjects and secured at least 50% marks. 45% for SC/ST/Category-1 candidates.' %>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
     <!-- Important Notices -->
     <section class="grid gap-6 bg-white rounded-2xl shadow-lg p-6">
       <h2 class="text-lg font-semibold text-blue-700">
@@ -47,11 +77,6 @@
           <%= isKannada
             ? 'ಅರ್ಜಿ ಹಾಗೂ ಅಗತ್ಯ ದಾಖಲೆಗಳನ್ನು BCA ವಿಭಾಗದ ಸಂಯೋಜಕರ ಕಚೇರಿಗೆ (ರೂಸಾ ಬ್ಲಾಕ್, ಜ್ಞಾನಭಾರತಿ ಕ್ಯಾಂಪಸ್, ಬೆಂಗಳೂರು ವಿಶ್ವವಿದ್ಯಾಲಯ) ಸಲ್ಲಿಸಿ. ಸಂಪರ್ಕ: 080-22961453.'
             : 'Submit application form with documents to the Coordinator, BCA Department (RUSA Block), Jnanabharathi Campus, Bangalore University. Contact: 080-22961453.' %>
-        </li>
-        <li>
-          <%= isKannada
-            ? 'ಅರ್ಹತೆ: ಸಾಮಾನ್ಯರಿಗೆ ಕನಿಷ್ಠ 50% ಅಂಕಗಳು, ಎಸ್‌ಸಿ/ಎಸ್‌ಟಿ/ಶ್ರೇಣಿ-1 ಅಭ್ಯರ್ಥಿಗಳಿಗೆ 45% ಅಗತ್ಯವಿದೆ.'
-            : 'Eligibility: Minimum 50% marks for General and 45% for SC/ST/Category-1 candidates.' %>
         </li>
         <li>
           <%= isKannada
@@ -74,7 +99,7 @@
       </ul>
     </section>
 
-    <!-- Buttons -->
+    <!-- Navigation Buttons -->
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-10 text-center">
       <a href="/notification?lang=<%= lang %>" class="bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-medium transition">
         <%= isKannada ? 'ವಿಸ್ತೃತ ನೋಟಿಫಿಕೇಶನ್' : 'Detailed Notification' %>

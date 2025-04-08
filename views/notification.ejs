@@ -1,85 +1,127 @@
-<% let isKannada = (lang === 'kn'); %>
 <!DOCTYPE html>
-<html lang="<%= isKannada ? 'kn' : 'en' %>">
+<html lang="<% let isKannada = (lang === 'kn'); %>">
 <head>
   <meta charset="UTF-8">
-  <title><%= isKannada ? 'ವಿಸ್ತೃತ ನೋಟಿಫಿಕೇಶನ್' : 'Detailed Notification' %></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= isKannada ? 'ಬಿಸಿಎ ಪ್ರವೇಶ ನೋಟಿಫಿಕೇಶನ್' : 'BCA Admission Notification' %></title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100 text-gray-800">
-  <div class="max-w-4xl mx-auto p-6">
-    
-    <!-- Header -->
+  <div class="max-w-5xl mx-auto p-4 sm:p-6 lg:p-10">
+
     <header class="flex justify-between items-center mb-6">
       <h1 class="text-2xl font-bold text-indigo-700">
-        <%= isKannada ? 'ಬಿಎಸ್ಎಸಿ ಡಾಟಾ ಸೈನ್ಸ್ / ಮೆಷಿನ್ ಲರ್ನಿಂಗ್ / ಫುಲ್ ಸ್ಟ್ಯಾಕ್ ಡೆವಲಪ್ಮೆಂಟ್' : 'B.Sc. Data Science / Machine Learning / Full Stack Development' %>
+        <%= isKannada ? 'ಬಿಸಿಎ ಪ್ರವೇಶ ಮಾಹಿತಿಪತ್ರ' : 'BCA Admission Notification' %>
       </h1>
-      <a href="?lang=<%= isKannada ? 'en' : 'kn' %>" class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded hover:bg-indigo-200 transition">
+      <a href="?lang=<%= isKannada ? 'en' : 'kn' %>" class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded hover:bg-indigo-200">
         <%= isKannada ? 'English' : 'ಕನ್ನಡ' %>
       </a>
     </header>
 
-    <!-- Notification Content -->
-    <section class="bg-white rounded-xl shadow p-6 space-y-4 text-sm sm:text-base">
-      
-      <div>
-        <h2 class="font-semibold text-lg text-blue-700 mb-1"><%= isKannada ? 'ಕೋರ್ಸ್ ಪರಿಚಯ' : 'Programme Name' %></h2>
-        <p>
-          <%= isKannada
-            ? 'ಈ ಕೋರ್ಸ್ ಮೆಷಿನ್ ಲರ್ನಿಂಗ್, ಡಾಟಾ ಸೈನ್ಸ್ ಮತ್ತು ಫುಲ್ ಸ್ಟ್ಯಾಕ್ ವೆಬ್ ಡೆವಲಪ್ಮೆಂಟ್ ನಂತಹ ಆಧುನಿಕ ತಂತ್ರಜ್ಞಾನಗಳಲ್ಲಿ ಪರಿಣತಿಯನ್ನು ನೀಡುತ್ತದೆ.'
-            : 'B.C.A undergraduate programme each specialization such as Machine Learning, Data Science, and Full stack Development' %>
-        </p>
-      </div>
 
-      <div>
-        <h2 class="font-semibold text-lg text-blue-700 mb-1"><%= isKannada ? 'ಅರ್ಹತೆ' : 'Admission Eligibility Criterion' %></h2>
-        <p>
-          <%= isKannada
-            ? 'ಪಿಯುಸಿ ಅಥವಾ ಸಮಾನ ಅರ್ಹತೆ ಹೊಂದಿರುವ ವಿದ್ಯಾರ್ಥಿಗಳು ಅರ್ಜಿ ಹಾಕಬಹುದು. ಸಾಮಾನ್ಯರಿಗೆ 50% ಮತ್ತು ಎಸ್‌ಸಿ/ಎಸ್‌ಟಿ/ಶ್ರೇಣಿ-1 ಅಭ್ಯರ್ಥಿಗಳಿಗೆ 45% ಅಂಕಗಳು ಅಗತ್ಯವಿದೆ.'
-            : 'Candidated who have completed two year PUC or equivalent with Arts/ Science/ Commerce Subjects as optional and have secured at least 50% of marks in aggregate.' %>
-        </p>
-      </div>
-
-      <div>
-        <h2 class="font-semibold text-lg text-blue-700 mb-1"><%= isKannada ? 'ಅರ್ಜಿ ಸಲ್ಲಿಸುವ ವಿಧಾನ' : 'How to Apply' %></h2>
-        <p>
-          <%= isKannada
-            ? 'ಅರ್ಜಿ ನಮೂನೆಯು ಎಂಸಿಎ ವಿಭಾಗ ಕಚೇರಿಯಿಂದ ಪಡೆದುಕೊಳ್ಳಬಹುದಾಗಿದೆ ಅಥವಾ ವೆಬ್‌ಸೈಟ್‌ನಿಂದ ಡೌನ್‌ಲೋಡ್ ಮಾಡಬಹುದು. ಅರ್ಜಿಯೊಂದಿಗೆ ಅಗತ್ಯ ಡಾಕ್ಯುಮೆಂಟ್‌ಗಳನ್ನು MCA ವಿಭಾಗ ಕಚೇರಿಗೆ ಸಲ್ಲಿಸಬೇಕು.'
-            : 'Application forms can be collected from the MCA Department office or downloaded from the website. Submit the form with required documents to the department.' %>
-        </p>
-      </div>
-
-      <div>
-        <h2 class="font-semibold text-lg text-blue-700 mb-1"><%= isKannada ? 'ಅಂತಿಮ ದಿನಾಂಕ' : 'Last Date' %></h2>
-        <p>
-          <%= isKannada
-            ? 'ಅರ್ಜಿ ಸಲ್ಲಿಸಲು ಕೊನೆಯ ದಿನಾಂಕ: 29 ಜೂನ್ 2024'
-            : 'Last date to apply: 29th June 2024' %>
-        </p>
-      </div>
-
-      <div>
-        <h2 class="font-semibold text-lg text-blue-700 mb-1"><%= isKannada ? 'ಸಂಪರ್ಕ ಮಾಹಿತಿ' : 'Contact Information' %></h2>
-        <p>
-          <%= isKannada
-            ? 'ಹೆಚ್ಚಿನ ಮಾಹಿತಿಗಾಗಿ ದಯವಿಟ್ಟು ಎಂಸಿಎ ವಿಭಾಗವನ್ನು ಸಂಪರ್ಕಿಸಿ: 080-22961453'
-            : 'For more information, please contact MCA Department: 080-22961453' %>
-        </p>
-      </div>
-
-    </section>
-
-    <!-- Footer Buttons -->
-    <div class="flex justify-center gap-4 mt-8">
-      <a href="/?lang=<%= lang %>" class="bg-gray-200 hover:bg-gray-300 px-5 py-2 rounded text-sm">
-        <%= isKannada ? 'ಮುಖಪುಟಕ್ಕೆ ಹಿಂತಿರುಗಿ' : 'Back to Home' %>
+    <!-- Back Button -->
+    <div class="mb-6">
+      <a href="/" class="inline-block bg-gray-200 hover:bg-gray-300 text-gray-700 text-sm px-4 py-2 rounded">
+        ⬅ <%= isKannada ? 'ಮುಖಪುಟಕ್ಕೆ ಹಿಂತಿರುಗಿ' : 'Back to Home' %>
       </a>
- 
     </div>
 
+    <!-- Seat Matrix -->
+    <section class="bg-white rounded-lg shadow p-4 sm:p-6 mb-6 overflow-x-auto">
+      <h2 class="text-xl font-semibold text-blue-700 mb-4"><%= isKannada ? 'ಆಸನಗಳ ಹಂಚಿಕೆ' : 'Provisional Seat Matrix' %></h2>
+      <table class="w-full border border-gray-300 text-sm">
+        <thead class="bg-gray-200">
+          <tr>
+            <th class="border px-2 py-1">Sl. No</th>
+            <th class="border px-2 py-1"><%= isKannada ? 'ಬಿಸಿಎ ಪ್ರೋಗ್ರಾಂ' : 'B.C.A. Programme' %></th>
+            <th class="border px-2 py-1">GM</th>
+            <th class="border px-2 py-1">SC</th>
+            <th class="border px-2 py-1">ST</th>
+            <th class="border px-2 py-1">Cat-I</th>
+            <th class="border px-2 py-1">IIA</th>
+            <th class="border px-2 py-1">IIB</th>
+            <th class="border px-2 py-1">IIIA</th>
+            <th class="border px-2 py-1">IIIB</th>
+            <th class="border px-2 py-1">HK</th>
+            <th class="border px-2 py-1">PWD</th>
+            <th class="border px-2 py-1">KM</th>
+            <th class="border px-2 py-1">RL</th>
+            <th class="border px-2 py-1">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border px-2 py-1">1</td>
+            <td class="border px-2 py-1"><%= isKannada ? 'ರೆಗ್ಯುಲರ್ ಫೀಸ್' : 'Regular Fees' %></td>
+            <td class="border px-2 py-1">33</td>
+            <td class="border px-2 py-1">13</td>
+            <td class="border px-2 py-1">5</td>
+            <td class="border px-2 py-1">3</td>
+            <td class="border px-2 py-1">14</td>
+            <td class="border px-2 py-1">6</td>
+            <td class="border px-2 py-1">7</td>
+            <td class="border px-2 py-1">4</td>
+            <td class="border px-2 py-1">7</td>
+            <td class="border px-2 py-1">4</td>
+            <td class="border px-2 py-1">2</td>
+            <td class="border px-2 py-1">2</td>
+            <td class="border px-2 py-1">90</td>
+          </tr>
+          <tr>
+            <td class="border px-2 py-1">2</td>
+            <td class="border px-2 py-1"><%= isKannada ? 'ಪೇಮೆಂಟ್ ಫೀಸ್' : 'Payment Fees' %></td>
+            <td class="border px-2 py-1">33</td>
+            <td class="border px-2 py-1">13</td>
+            <td class="border px-2 py-1">5</td>
+            <td class="border px-2 py-1">3</td>
+            <td class="border px-2 py-1">14</td>
+            <td class="border px-2 py-1">6</td>
+            <td class="border px-2 py-1">7</td>
+            <td class="border px-2 py-1">4</td>
+            <td class="border px-2 py-1">8</td>
+            <td class="border px-2 py-1">5</td>
+            <td class="border px-2 py-1">2</td>
+            <td class="border px-2 py-1">2</td>
+            <td class="border px-2 py-1">90</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Fee Structure -->
+    <section class="bg-white rounded-lg shadow p-4 sm:p-6 mb-6 overflow-x-auto">
+      <h2 class="text-xl font-semibold text-blue-700 mb-4"><%= isKannada ? 'ಫೀಸ್ ರಚನೆ' : 'Fee Structure (Annual)' %></h2>
+      <table class="w-full border border-gray-300 text-sm">
+        <thead class="bg-gray-200">
+          <tr>
+            <th class="border px-2 py-1">#</th>
+            <th class="border px-2 py-1"><%= isKannada ? 'ಫೀಸ್ ಬಗೆ' : 'Type of Fee' %></th>
+            <th class="border px-2 py-1">1st Year</th>
+            <th class="border px-2 py-1">2nd Year</th>
+            <th class="border px-2 py-1">3rd Year</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="border px-2 py-1">1</td><td class="border px-2 py-1">Registration Fee</td><td class="border px-2 py-1">1000</td><td class="border px-2 py-1">0</td><td class="border px-2 py-1">0</td></tr>
+          <tr><td class="border px-2 py-1">2</td><td class="border px-2 py-1">Admission Fee</td><td class="border px-2 py-1">1000</td><td class="border px-2 py-1">0</td><td class="border px-2 py-1">0</td></tr>
+          <tr><td class="border px-2 py-1">3</td><td class="border px-2 py-1">Tuition Fee</td><td class="border px-2 py-1">22750</td><td class="border px-2 py-1">22750</td><td class="border px-2 py-1">22750</td></tr>
+          <tr><td class="border px-2 py-1">4</td><td class="border px-2 py-1">Laboratory Fee</td><td class="border px-2 py-1">1000</td><td class="border px-2 py-1">1000</td><td class="border px-2 py-1">10000</td></tr>
+          <tr><td class="border px-2 py-1">5</td><td class="border px-2 py-1">Library Fee</td><td class="border px-2 py-1">500</td><td class="border px-2 py-1">500</td><td class="border px-2 py-1">500</td></tr>
+          <tr><td class="border px-2 py-1">6</td><td class="border px-2 py-1">Sports Fee</td><td class="border px-2 py-1">500</td><td class="border px-2 py-1">500</td><td class="border px-2 py-1">500</td></tr>
+          <tr><td class="border px-2 py-1">7</td><td class="border px-2 py-1">Medical Fee</td><td class="border px-2 py-1">100</td><td class="border px-2 py-1">100</td><td class="border px-2 py-1">100</td></tr>
+          <tr><td class="border px-2 py-1">8</td><td class="border px-2 py-1">Student Activity Fee</td><td class="border px-2 py-1">100</td><td class="border px-2 py-1">100</td><td class="border px-2 py-1">100</td></tr>
+          <tr><td class="border px-2 py-1">9</td><td class="border px-2 py-1">ID Card</td><td class="border px-2 py-1">100</td><td class="border px-2 py-1">0</td><td class="border px-2 py-1">0</td></tr>
+          <tr><td class="border px-2 py-1">10</td><td class="border px-2 py-1">Cultural Activity Fee</td><td class="border px-2 py-1">100</td><td class="border px-2 py-1">100</td><td class="border px-2 py-1">100</td></tr>
+          <tr><td class="border px-2 py-1">11</td><td class="border px-2 py-1">Internet User Fee</td><td class="border px-2 py-1">100</td><td class="border px-2 py-1">100</td><td class="border px-2 py-1">100</td></tr>
+          <tr><td class="border px-2 py-1">12</td><td class="border px-2 py-1">Teachers Benefit Fund</td><td class="border px-2 py-1">25</td><td class="border px-2 py-1">25</td><td class="border px-2 py-1">25</td></tr>
+          <tr><td class="border px-2 py-1">13</td><td class="border px-2 py-1">Students Benefit Fund</td><td class="border px-2 py-1">25</td><td class="border px-2 py-1">25</td><td class="border px-2 py-1">25</td></tr>
+          <tr class="font-semibold"><td colspan="2" class="border px-2 py-1 text-right">Total</td><td class="border px-2 py-1">36300</td><td class="border px-2 py-1">34300</td><td class="border px-2 py-1">34300</td></tr>
+        </tbody>
+      </table>
+    </section>
+
     <!-- Footer -->
-    <footer class="text-center mt-10 text-xs text-gray-400">
+    <footer class="text-center text-xs text-gray-400 mt-10">
       &copy; 2025 <%= isKannada ? 'ಬೆಂಗಳೂರು ವಿಶ್ವವಿದ್ಯಾಲಯ' : 'Bangalore University' %> | MCA Department
     </footer>
 
