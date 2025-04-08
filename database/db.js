@@ -15,6 +15,7 @@ db.serialize(() => {
     guardianMobile TEXT,
     email TEXT,
     parentEmail TEXT,
+    adharNumber TEXT,
 
     -- Address
     permLandmark TEXT,

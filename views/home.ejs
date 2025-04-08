@@ -7,87 +7,88 @@
   <title><%= isKannada ? 'ಬೆಂಗಳೂರು ವಿಶ್ವವಿದ್ಯಾಲಯ - BCA ಪ್ರವೇಶ' : 'Bangalore University - BCA Admission' %></title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-50 text-gray-800">
-  <div class="max-w-4xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
+<body class="bg-gray-100 text-gray-800">
+  <div class="max-w-5xl mx-auto px-6 py-8">
 
-    <!-- Header -->
-    <header class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 space-y-4 sm:space-y-0">
+    <!-- Top Bar -->
+    <div class="flex justify-between items-center mb-8">
       <div>
-        <h1 class="text-xl sm:text-2xl font-bold text-indigo-700 leading-snug">
-          <%= isKannada ? 'ಬೆಂಗಳೂರು ವಿಶ್ವವಿದ್ಯಾಲಯ - BCA ಪ್ರವೇಶ 2025-26' : 'Bangalore University - BCA Admission 2025-26' %>
+        <h1 class="text-2xl sm:text-3xl font-bold text-indigo-800">
+          <%= isKannada ? 'ಬೆಂಗಳೂರು ವಿಶ್ವವಿದ್ಯಾಲಯ - BCA ಪ್ರವೇಶ 2025–26' : 'Bangalore University – BCA Admission 2025–26' %>
         </h1>
-        <p class="text-sm text-gray-600">
-          Machine Learning | Data Science | Full Stack Development
+        <p class="text-sm sm:text-base text-gray-600">
+          <%= isKannada ? 'ಮೆಷಿನ್ ಲರ್ನಿಂಗ್ | ಡೇಟಾ ಸೈನ್ಸ್ | ಫುಲ್ ಸ್ಟ್ಯಾಕ್ ಡೆವಲಪ್‌ಮೆಂಟ್' : 'Machine Learning | Data Science | Full Stack Development' %>
         </p>
       </div>
-      <!-- Language Toggle -->
-      <a href="?lang=<%= isKannada ? 'en' : 'kn' %>" class="bg-indigo-100 text-indigo-700 px-4 py-2 rounded hover:bg-indigo-200 transition text-sm">
+      <a href="?lang=<%= isKannada ? 'en' : 'kn' %>" class="text-sm bg-indigo-100 text-indigo-700 px-4 py-2 rounded hover:bg-indigo-200 transition">
         <%= isKannada ? 'English' : 'ಕನ್ನಡ' %>
       </a>
-    </header>
+    </div>
 
-    <!-- Admission Declaration -->
-    <section class="bg-white rounded-xl shadow p-4 sm:p-6 mb-6">
+    <!-- Highlight Box -->
+    <section class="bg-white border border-indigo-100 rounded-2xl shadow-lg p-6 mb-8">
       <h2 class="text-lg font-semibold mb-2">
         🎓 <%= isKannada ? 'ಪ್ರವೇಶ ಪ್ರಕಟಣೆ' : 'Admission Announcement' %>
       </h2>
-      <p class="text-sm leading-relaxed">
+      <p class="text-sm leading-relaxed text-gray-700">
         <%= isKannada
-          ? '2025-26ನೇ ಶೈಕ್ಷಣಿಕ ಸಾಲಿನ BCA (ಬ್ಯಾಚುಲರ್ ಆಫ್ ಕಂಪ್ಯೂಟರ್ ಅಪ್ಲಿಕೇಶನ್) ಪದವೀ ಪೂರ್ವ ಕಾರ್ಯಕ್ರಮಕ್ಕೆ ಅರ್ಜಿಗಳನ್ನು ಆಹ್ವಾನಿಸಲಾಗಿದೆ. ಈ ಕಾರ್ಯಕ್ರಮದಲ್ಲಿ ಯಂತ್ರ ಅಧ್ಯಯನ (Machine Learning), ಡೇಟಾ ಸೈನ್ಸ್ (Data Science), ಮತ್ತು ಫುಲ್ ಸ್ಟ್ಯಾಕ್ ಡೆವಲಪ್‌ಮೆಂಟ್ (Full Stack Development) ಮುಂತಾದ ವಿಶೇಷೀಕರಣಗಳಿವೆ.'
-          : 'Applications are invited for admission to the BCA (Bachelor of Computer Applications) undergraduate programme for the academic year 2025-26. The program offers specializations in Machine Learning, Data Science, and Full Stack Development.' %>
+          ? '2025–26ನೇ ಶೈಕ್ಷಣಿಕ ಸಾಲಿನ BCA (ಬ್ಯಾಚುಲರ್ ಆಫ್ ಕಂಪ್ಯೂಟರ್ ಅಪ್ಲಿಕೇಶನ್) ಪದವೀ ಪೂರ್ವ ಕೋರ್ಸ್‌ಗೆ ಅರ್ಜಿ ಆಹ್ವಾನಿಸಲಾಗಿದೆ. ಈ ಕೋರ್ಸ್ ಯಂತ್ರ ಅಧ್ಯಯನ (Machine Learning), ಡೇಟಾ ಸೈನ್ಸ್ (Data Science), ಹಾಗೂ ಫುಲ್ ಸ್ಟ್ಯಾಕ್ ಡೆವಲಪ್‌ಮೆಂಟ್ (Full Stack Development) ನಂತಹ ಆಧುನಿಕ ವಿಶೇಷೀಕರಣಗಳನ್ನು ಒಳಗೊಂಡಿದೆ.'
+          : 'Applications are invited for the BCA (Bachelor of Computer Applications) undergraduate programme for the academic year 2025–26. The course includes modern specializations such as Machine Learning, Data Science, and Full Stack Development.' %>
       </p>
     </section>
 
     <!-- Important Notices -->
-    <section class="bg-white rounded-xl shadow p-4 sm:p-6">
-      <h2 class="text-lg sm:text-xl font-semibold mb-4">
-        📌 <%= isKannada ? 'ಪ್ರಮುಖ ಸೂಚನೆಗಳು' : 'Important Notices' %>
+    <section class="grid gap-6 bg-white rounded-2xl shadow-lg p-6">
+      <h2 class="text-lg font-semibold text-blue-700">
+        📌 <%= isKannada ? 'ಪ್ರಮುಖ ಸೂಚನೆಗಳು' : 'Important Information' %>
       </h2>
-      <ul class="space-y-3 list-disc pl-5 text-sm leading-relaxed">
+      <ul class="space-y-3 list-disc list-inside text-sm text-gray-700">
         <li>
           <%= isKannada
-            ? 'ಅರ್ಜಿ ಹಾಗೂ ಅಗತ್ಯ ಡಾಕ್ಯುಮೆಂಟ್‌ಗಳ ನಕಲನ್ನು ಬಿ.ಸಿ.ಎ ವಿಭಾಗದ ಸಂಯೋಜಕರ ಕಚೇರಿಗೆ (ರೂಸಾ ಬ್ಲಾಕ್, ಜ್ಞಾನಭಾರತಿ ಕ್ಯಾಂಪಸ್, ಬೆಂಗಳೂರು ವಿಶ್ವವಿದ್ಯಾಲಯ, ಬೆಂಗಳೂರು-56) ಸಲ್ಲಿಸಿ. ಹೆಚ್ಚಿನ ಮಾಹಿತಿಗೆ ಸಂಪರ್ಕಿಸಿ: 080-22961453'
-            : 'Candidates must submit the hard copy of the application along with necessary documents (please refer detailed notification) to the office of the Coordinator, BCA Department, RUSA Building, Jnanabharathi Campus, Bangalore University, Bangalore - 56. For admission details, contact: 080-22961453.' %>
+            ? 'ಅರ್ಜಿ ಹಾಗೂ ಅಗತ್ಯ ದಾಖಲೆಗಳನ್ನು BCA ವಿಭಾಗದ ಸಂಯೋಜಕರ ಕಚೇರಿಗೆ (ರೂಸಾ ಬ್ಲಾಕ್, ಜ್ಞಾನಭಾರತಿ ಕ್ಯಾಂಪಸ್, ಬೆಂಗಳೂರು ವಿಶ್ವವಿದ್ಯಾಲಯ) ಸಲ್ಲಿಸಿ. ಸಂಪರ್ಕ: 080-22961453.'
+            : 'Submit application form with documents to the Coordinator, BCA Department (RUSA Block), Jnanabharathi Campus, Bangalore University. Contact: 080-22961453.' %>
         </li>
         <li>
           <%= isKannada
-            ? 'ಅರ್ಹತೆ: ಸಾಮಾನ್ಯ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಕನಿಷ್ಠ 50% ಅಂಕಗಳು ಮತ್ತು ಎಸ್‌ಸಿ/ಎಸ್‌ಟಿ/ಪ್ರಥಮ ಶ್ರೇಣಿಗೆ 45% ಅಂಕಗಳು ಅಗತ್ಯವಿದೆ.'
-            : 'Eligibility: Minimum 50% marks for General candidates and 45% for SC/ST/Category-1 candidates.' %>
+            ? 'ಅರ್ಹತೆ: ಸಾಮಾನ್ಯರಿಗೆ ಕನಿಷ್ಠ 50% ಅಂಕಗಳು, ಎಸ್‌ಸಿ/ಎಸ್‌ಟಿ/ಶ್ರೇಣಿ-1 ಅಭ್ಯರ್ಥಿಗಳಿಗೆ 45% ಅಗತ್ಯವಿದೆ.'
+            : 'Eligibility: Minimum 50% marks for General and 45% for SC/ST/Category-1 candidates.' %>
         </li>
         <li>
           <%= isKannada
-            ? 'ಹಾಸ್ಟೆಲ್ ಸೌಲಭ್ಯ ಲಭ್ಯವಿಲ್ಲ. ಸ್ಥಳೀಯ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಆದ್ಯತೆ ನೀಡಲಾಗುತ್ತದೆ.'
-            : 'Hostel facility is not available for this UG course. Local students will be given preference.' %>
+            ? 'ಹಾಸ್ಟೆಲ್ ಸೌಲಭ್ಯ ಲಭ್ಯವಿಲ್ಲ. ಸ್ಥಳೀಯ ಅಭ್ಯರ್ಥಿಗಳಿಗೆ ಆದ್ಯತೆ.'
+            : 'Hostel facility is not available. Local candidates will be preferred.' %>
         </li>
         <li>
           <%= isKannada
-            ? 'ವಿಸ್ತೃತ ಮಾಹಿತಿಗೆ ದಯವಿಟ್ಟು ಅಧಿಕೃತ ವೆಬ್‌ಸೈಟ್‌ಗೆ ಭೇಟಿ ನೀಡಿ:'
-            : 'For more information, please visit the official website:' %>
-          <a class="text-blue-600 underline" href="https://bangaloreuniversity.karnataka.gov.in/" target="_blank">bangaloreuniversity.karnataka.gov.in</a>
+            ? 'ವಿಸ್ತೃತ ಮಾಹಿತಿಗೆ ಅಧಿಕೃತ ವೆಬ್‌ಸೈಟ್ ನೋಡಿ:'
+            : 'For complete details, visit the official website:' %>
+          <a href="https://bangaloreuniversity.karnataka.gov.in/" class="text-blue-600 underline" target="_blank">
+            bangaloreuniversity.karnataka.gov.in
+          </a>
         </li>
         <li>
           <%= isKannada
             ? 'ಅರ್ಜಿ ಸಲ್ಲಿಸಲು ಕೊನೆಯ ದಿನಾಂಕ: 29 ಜೂನ್ 2025'
-            : 'Last date for submission of the application: 29th June 2025' %>
+            : 'Last date to apply: 29th June 2025' %>
         </li>
       </ul>
     </section>
 
-    <!-- Action Buttons -->
-    <section class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
-      <a href="/notification?lang=<%= lang %>" class="bg-blue-600 hover:bg-blue-700 text-white py-3 rounded text-center text-sm transition">
+    <!-- Buttons -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-10 text-center">
+      <a href="/notification?lang=<%= lang %>" class="bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-medium transition">
         <%= isKannada ? 'ವಿಸ್ತೃತ ನೋಟಿಫಿಕೇಶನ್' : 'Detailed Notification' %>
       </a>
-      <a href="/apply" class="bg-green-600 hover:bg-green-700 text-white py-3 rounded text-center text-sm transition">
+      <a href="/apply" class="bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-medium transition">
         <%= isKannada ? 'ಅರ್ಜಿ ನಮೂನೆ' : 'Application Form' %>
       </a>
-      <a href="/verify" class="bg-yellow-500 hover:bg-yellow-600 text-white py-3 rounded text-center text-sm transition">
+      <a href="/verify" class="bg-yellow-500 hover:bg-yellow-600 text-white py-3 rounded-xl font-medium transition">
         <%= isKannada ? 'ಅರ್ಜಿ ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ' : 'Download Application' %>
       </a>
-    </section>
+    </div>
 
     <!-- Footer -->
-    <footer class="text-center mt-10 text-xs text-gray-400">
+    <footer class="text-center mt-12 text-xs text-gray-500">
       &copy; 2025 <%= isKannada ? 'ಬೆಂಗಳೂರು ವಿಶ್ವವಿದ್ಯಾಲಯ' : 'Bangalore University' %> | MCA Department
     </footer>
   </div>
