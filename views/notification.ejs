@@ -26,6 +26,23 @@
       </a>
     </div>
 
+    <!-- Documents to Submit -->
+<section class="bg-white rounded-lg shadow p-4 sm:p-6 mb-6 overflow-x-auto">
+  <h2 class="text-xl font-semibold text-blue-700 mb-4">
+    <%= isKannada ? 'ಸಲ್ಲಿಸಬೇಕಾದ ದಾಖಲೆಗಳು (ಕ್ರಮವಾಗಿ)' : 'Documents To Submit (In sequence)' %>
+  </h2>
+  <ol class="w-full list-decimal list-inside space-y-2">
+    <li><%= isKannada ? 'ಪೂರೈಸಿದ ಆನ್‌ಲೈನ್ ಅರ್ಜಿ ನಮೂನೆ' : 'Filled Online Application' %></li>
+    <li><%= isKannada ? 'ಆಧಾರ್ ಕಾರ್ಡ್ ಝೆರಾಕ್ಸ್' : 'Aadhaar Card Xerox' %></li>
+    <li><%= isKannada ? '10ನೇ ತರಗತಿಯ ಅಂಕಪಟ್ಟಿ' : '10th Marks Card' %></li>
+    <li><%= isKannada ? '12ನೇ ತರಗತಿಯ ಅಂಕಪಟ್ಟಿ' : '12th Marks Card' %></li>
+    <li><%= isKannada ? 'ಜಾತಿ ಪ್ರಮಾಣಪತ್ರ' : 'Caste Certificate' %></li>
+    <li><%= isKannada ? 'ಆದಾಯ ಪ್ರಮಾಣಪತ್ರ' : 'Income Certificate' %></li>
+    <li><%= isKannada ? 'ಪಡೆದಿವೃತ್ತಿ ಪ್ರಮಾಣಪತ್ರ (ಟಿಸಿ)' : 'Transfer Certificate (TC)' %></li>
+  </ol>
+</section>
+
+
     <!-- Seat Matrix -->
     <section class="bg-white rounded-lg shadow p-4 sm:p-6 mb-6 overflow-x-auto">
       <h2 class="text-xl font-semibold text-blue-700 mb-4"><%= isKannada ? 'ಆಸನಗಳ ಹಂಚಿಕೆ' : 'Provisional Seat Matrix' %></h2>
